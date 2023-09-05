@@ -29,6 +29,7 @@
           name="email"
           id="email"
           placeholder="admin@example.com"
+          value="admin@example.com"
         />
       </div>
       <div>
@@ -36,13 +37,26 @@
         <input
           type="password"
           name="password"
-          id="email"
+          id="password"
           placeholder="qwerty"
+          value="qwerty"
         />
       </div>
       <button id="loginButton" class="loginBtn">
-        <a id="homeLink" href="component/home.html">Login</a>
+        <a id="homeLink">Login</a>
       </button>
+    </div>
+
+    <div class="" id="overlay">
+      <div class="model-container" id="model-container">
+        <div class="loader" id="loader"></div>
+        <div class="content" id="content">
+          <i class="fa-solid fa-xmark"></i>
+          <h3>Error!</h3>
+          <p>Incorrect email or password.</p>
+          <button class="close-btn" id="btn-close">OK</button>
+        </div>
+      </div>
     </div>
     <script src="./script/script.js"></script>
   </body>
