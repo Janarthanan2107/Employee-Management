@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <!-- normalized css -->
+    <link rel="stylesheet" href="./style/normalized.css" />
+    <!-- fontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Customized css -->
+    <link rel="stylesheet" href="./style/customized.css" />
+  </head>
+
+  <body>
+    <!--Contents needs to places here!-->
+    <div class="login-container">
+      <div>
+        <h1>Admin Login</h1>
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="admin@example.com"
+        />
+      </div>
+      <div>
+        <label for="Password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="email"
+          placeholder="qwerty"
+        />
+      </div>
+      <button id="loginButton" class="loginBtn">
+        <a id="homeLink" href="component/home.html">Login</a>
+      </button>
+    </div>
+    <script src="./script/script.js"></script>
+  </body>
+</html>

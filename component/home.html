@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <!-- normalized css -->
+    <link rel="stylesheet" href="./style/normalized.css" />
+    <!-- fontAwesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Customized css -->
+    <link rel="stylesheet" href="/style/customized.css" />
+    <link rel="stylesheet" href="/style/componentStyles/home.css" />
+  </head>
+  <body>
+    <div class="home-container">
+      <h1>Employee Management Software</h1>
+      <button type="button" class="addBtn">
+        <a href="/component/form.html">Add Employee</a>
+      </button>
+      <button type="button" class="logoutBtn">
+        <a href="/index.html">Logout</a>
+      </button>
+
+      <table>
+        <thead>
+          <tr>
+            <th>No.</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+            <th>Date</th>
+            <th colspan="2" class="text-center">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Jesica</td>
+            <td>Watlington</td>
+            <td>jesica@example.com</td>
+            <td>$60,000</td>
+            <td>2019-10-10</td>
+            <td class="text-right"><button type="button" >Edit</button></td>
+            <td class="text-left"><button type="button">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
