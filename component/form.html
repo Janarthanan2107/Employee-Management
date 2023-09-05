@@ -19,7 +19,36 @@
     <link rel="stylesheet" href="/style/componentStyles/form.css" />
   </head>
   <body>
-    form
-    <button type="button"><a href="/component/home.html">Add</a></button>
+    <div class="form-container">
+      <h1>Add Employee</h1>
+      <form>
+        <div>
+          <label for="firstname">First Name</label>
+          <input type="text" name="firstname" id="firstname" />
+        </div>
+        <div>
+          <label for="lastname">Last Name</label>
+          <input type="text" name="lastname" id="lastname" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div>
+          <label for="salary">Salary($)</label>
+          <input type="number" name="salary" id="salary" />
+        </div>
+        <div>
+          <label for="date">Date</label>
+          <input type="date" name="date" id="date" />
+        </div>
+      </form>
+      <button type="button" class="addBtn">
+        <a href="/component/home.html">Add</a>
+      </button>
+      <button type="button" class="cancel">
+        <a href="/component/home.html">Cancel</a>
+      </button>
+    </div>
   </body>
 </html>
