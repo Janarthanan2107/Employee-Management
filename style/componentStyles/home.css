@@ -5,7 +5,7 @@
     padding: 1rem;
 }
 
-table{
+table {
     border-collapse: collapse;
     border-spacing: 0;
     max-width: 100%;
@@ -17,21 +17,86 @@ thead th {
     border-bottom: 2px solid #dedede;
 }
 
-td, th {
+td,
+th {
     padding: 0.5rem;
     text-align: left;
+}
+
+tbody {
+    position: relative;
 }
 
 table tbody tr:nth-child(odd) {
     background-color: #f8f8f8;
 }
 
-td > button {
+td>button {
     padding: 0.75rem 1.25rem;
     border-radius: 4px;
     border: 0.2px solid gray;
 }
 
-td > button:hover{
+td>button:hover {
     border: 0.2px solid black;
+}
+
+p.listMsg {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    background-color: rgba(128, 128, 128, 0.212);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.fa-check {
+    font-size: 60px;
+    width: 4.7rem;
+    height: 4.7rem;
+    text-align: center;
+    color: rgb(0, 255, 68);
+    border-radius: 50%;
+    border: 2px solid rgb(0, 255, 55);
+    transition: all 0.8s ease-in;
+}
+
+.fa-question {
+    font-size: 60px;
+    width: 4.7rem;
+    height: 4.7rem;
+    text-align: center;
+    color: royalblue;
+    border-radius: 50%;
+    border: 2px solid royalblue;
+    transition: all 0.8s ease-in;
+}
+
+.fa-exclamation {
+    font-size: 60px;
+    width: 4.9rem;
+    height: 4.9rem;
+    text-align: center;
+    color: orange;
+    border-radius: 50%;
+    border: 2px solid orange;
+    transition: all 0.8s ease-in;
+}
+
+.model-container #content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cancelBtn {
+    padding: 0.75rem;
+    border: 0;
+    border-radius: .25em;
+    background: initial;
+    background-color: #6e7881;
+    color: #fff;
+    font-size: 1em;
 }

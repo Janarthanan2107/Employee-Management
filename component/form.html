@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Management</title>
     <!-- normalized css -->
-    <link rel="stylesheet" href="./style/normalized.css" />
+    <link rel="stylesheet" href="/style/normalized.css" />
     <!-- fontAwesome CDN -->
     <link
       rel="stylesheet"
@@ -24,11 +24,11 @@
       <form>
         <div>
           <label for="firstname">First Name</label>
-          <input type="text" name="firstname" id="firstname" />
+          <input type="text" name="firstname" id="firstName" />
         </div>
         <div>
           <label for="lastname">Last Name</label>
-          <input type="text" name="lastname" id="lastname" />
+          <input type="text" name="lastname" id="lastName" />
         </div>
         <div>
           <label for="email">Email</label>
@@ -42,13 +42,15 @@
           <label for="date">Date</label>
           <input type="date" name="date" id="date" />
         </div>
+        <button type="button" class="addBtn">
+          <a id="addToHome" href="">Add</a>
+        </button>
+        <button type="button" class="cancel">
+          <a id="goToHome" href="/component/home.html">Cancel</a>
+        </button>
       </form>
-      <button type="button" class="addBtn">
-        <a href="/component/home.html">Add</a>
-      </button>
-      <button type="button" class="cancel">
-        <a href="/component/home.html">Cancel</a>
-      </button>
     </div>
+
+    <script src="/script/form.js"></script>
   </body>
 </html>

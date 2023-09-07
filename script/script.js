@@ -15,6 +15,7 @@ const loader = document.getElementById("loader")
 
 
 //global variable
+let isLoggedIn
 
 //functions
 const init = () => {
@@ -27,7 +28,7 @@ const open = () => {
     overlay.classList.add('overlay')
     loader.classList.remove('open')
     loader.classList.add('close')
-    contentInDialog.style.display="block"
+    contentInDialog.style.display = "block"
 }
 
 const close = () => {
@@ -36,7 +37,7 @@ const close = () => {
     overlay.classList.remove('overlay')
     loader.classList.remove('open')
     loader.classList.add('close')
-    contentInDialog.style.display="none"
+    contentInDialog.style.display = "none"
 }
 
 const openLoader = () => {
@@ -45,7 +46,7 @@ const openLoader = () => {
     overlay.classList.add('overlay')
     loader.classList.remove('close')
     loader.classList.add('open')
-    contentInDialog.style.display="none"
+    contentInDialog.style.display = "none"
 }
 
 const closeLoader = () => {
@@ -58,7 +59,12 @@ const closeLoader = () => {
 button.addEventListener('click', () => {
     // href="component/home.html"
     if (email.value == "admin@example.com" && password.value == "qwerty") {
-        link.href = "component/home.html"
+        openLoader()
+        setTimeout(() => {
+            localStorage.setItem("loggedInDialog" , true)
+            localStorage.setItem("isLoggedIn" , true)
+            window.location.href = "component/home.html"
+        }, 2000);
     } else {
         openLoader()
         setTimeout(() => {

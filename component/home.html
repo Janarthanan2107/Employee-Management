@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee Management</title>
     <!-- normalized css -->
-    <link rel="stylesheet" href="./style/normalized.css" />
+    <link rel="stylesheet" href="/style/normalized.css" />
     <!-- fontAwesome CDN -->
     <link
       rel="stylesheet"
@@ -24,8 +24,8 @@
       <button type="button" class="addBtn">
         <a href="/component/form.html">Add Employee</a>
       </button>
-      <button type="button" class="logoutBtn">
-        <a href="/index.html">Logout</a>
+      <button type="button" class="logoutBtn" id="logout">
+            Logout
       </button>
 
       <table>
@@ -40,19 +40,19 @@
             <th colspan="2" class="text-center">Action</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Jesica</td>
-            <td>Watlington</td>
-            <td>jesica@example.com</td>
-            <td>$60,000</td>
-            <td>2019-10-10</td>
-            <td class="text-right"><button type="button" >Edit</button></td>
-            <td class="text-left"><button type="button">Delete</button></td>
-          </tr>
+        <tbody id="body">
         </tbody>
       </table>
+      <div class="" id="deleteOverlay">
+      </div>
+      <div class="" id="updateOverlay">
+      </div>
     </div>
+    <!-- login message -->
+    <div class="" id="successOverlay">
+    </div>
+    <div class="" id="logOutOverlay">
+    </div>
+    <script src="/script/home.js"></script>
   </body>
 </html>

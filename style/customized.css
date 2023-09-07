@@ -189,6 +189,14 @@ input {
     margin-bottom: 1rem;
 }
 
+.model-container .successfull {
+    color: rgb(99, 99, 99);
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 .model-container p {
     color: rgb(99, 99, 99);
 }
