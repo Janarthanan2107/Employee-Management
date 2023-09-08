@@ -79,7 +79,7 @@ const deleteRowDialog = (id) => {
         deleteRow(id)
         deleteOverlayContainer.innerHTML = ""
     })
-
+ 
     deleteCloseBtn.addEventListener("click", () => {
         deleteOverlayContainer.innerHTML = ""
     })
@@ -125,7 +125,7 @@ const successDialogTemplate = (msg) => {
         </div>
     </div>`
     overlayContainer.appendChild(overlay)
-}
+} 
 
 const logOutDialogTemplate = (msg) => {
     const overlay = document.createElement("div")
@@ -178,6 +178,7 @@ if (localStorage.getItem("updatedDialog") === "true") {
 }
 
 setTimeout(() => {
+    localStorage.setItem("updatedDialog", false)
     updateOverlayContainer.innerHTML = ""
 }, 2000);
 

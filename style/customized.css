@@ -234,10 +234,6 @@ input {
     display: block;
 }
 
-.content {
-    display: none;
-}
-
 .loader {
     position: relative;
     left: 40%;

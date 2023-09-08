@@ -8,6 +8,11 @@ const firstNameEl = document.getElementById("firstName"),
     dateEl = document.getElementById("date"),
     addToHomeBtn = document.getElementById("addToHome"),
     goToHomeBtn = document.getElementById("goToHome")
+
+const overlayContainer = document.getElementById('overlay')
+const modelContainer = document.getElementById('model-container')
+const contentInDialog = document.getElementById("content")
+const closeBtn = document.getElementById('btn-close')
 //output
 
 //global variable
@@ -19,6 +24,22 @@ let itemToEdit = null;
 //function
 const init = () => {
     addToHomeBtn.innerText = itemToEdit ? "Update" : "Add"
+    close()
+}
+
+// error message
+const open = () => {
+    modelContainer.classList.remove('close')
+    modelContainer.classList.add('open')
+    overlay.classList.add('overlay')
+    contentInDialog.style.display = "block"
+}
+
+const close = () => {
+    modelContainer.classList.remove('open')
+    modelContainer.classList.add('close')
+    overlay.classList.remove('overlay')
+    contentInDialog.style.display = "none"
 }
 
 const nullishValue = () => {
@@ -61,43 +82,56 @@ addToHomeBtn.addEventListener("click", (e) => {
     const salary = salaryEl.value;
     const date = dateEl.value;
 
-    if (itemToEdit) {
-        // You are editing an existing item instead of creating a new one..
-        items = items.map((item) => {
-            if (item.id === parseInt(itemId)) {
-                return {
-                    ...item,
-                    firstName,
-                    lastName,
-                    email,
-                    salary,
-                    date,
-                };
-            }
-            return item;
-        });
-        localStorage.setItem("updatedDialog", true)
+    if (firstName && lastName && email && salary && date) {
+        if (itemToEdit) {
+            // You are editing an existing item instead of creating a new one..
+                items = items.map((item) => {
+                    if (item.id === parseInt(itemId)) {
+                        return {
+                            ...item,
+                            firstName,
+                            lastName,
+                            email,
+                            salary,
+                            date,
+                        };
+                    }
+                    return item;
+            });
+            localStorage.setItem("updatedDialog", true)
+            // Store the updated items array in localStorage.
+            localStorage.setItem("employee", JSON.stringify(items));
+            nullishValue();
+
+            // Redirect to the home page.
+            window.location.href = "/component/home.html";
+        } else {
+            // You are creating a new item here.
+            const newItems = {
+                id: Date.now(),
+                firstName: firstName,
+                lastName: lastName,
+                email: email,
+                salary: salary,
+                date: date,
+            };
+
+            // Push the new item to the items array.
+            items.push(newItems);
+            // Store the updated items array in localStorage.
+            localStorage.setItem("employee", JSON.stringify(items));
+            nullishValue();
+
+            // Redirect to the home page.
+            window.location.href = "/component/home.html";
+        }
     } else {
-        // You are creating a new item here.
-        const newItems = {
-            id: Date.now(),
-            firstName: firstName,
-            lastName: lastName,
-            email: email,
-            salary: salary,
-            date: date,
-        };
-
-        // Push the new item to the items array.
-        items.push(newItems);
+        open()
     }
+})
 
-    // Store the updated items array in localStorage.
-    localStorage.setItem("employee", JSON.stringify(items));
-    nullishValue();
-
-    // Redirect to the home page.
-    window.location.href = "/component/home.html";
+closeBtn.addEventListener("click", () => {
+    close()
 })
 
 if (localStorage.getItem("isLoggedIn") === "false") {
