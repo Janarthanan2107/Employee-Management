@@ -1,3 +1,3 @@
 Curd Application for Employee Management along with login method.
 
-Visit Url : https://janarthanan2107.github.io/Employee-Management/
+Visit Url : https://main--beautiful-baklava-de2c53.netlify.app/
